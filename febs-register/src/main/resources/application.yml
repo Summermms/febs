@@ -1,0 +1,24 @@
+server:
+  port: 8001
+  servlet:
+    context-path: /register
+spring:
+  application:
+    name: FEBBS-Register
+  security:
+    user:
+      name: febs
+      password: 111111
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    instance-info-replication-interval-seconds: 30
+    service-url.defaultZone:  http://${spring.security.user.name}:${spring.security.user.password}@${eureka.instance.hostname}:${server.port}${server.servlet.context-path}/eureka/
+
+
+
+
+

@@ -10,6 +10,7 @@
     <modules>
         <module>../febs-common</module>
         <module>../febs-register</module>
+        <module>../febs-auth</module>
     </modules>
     <packaging>pom</packaging>
 
